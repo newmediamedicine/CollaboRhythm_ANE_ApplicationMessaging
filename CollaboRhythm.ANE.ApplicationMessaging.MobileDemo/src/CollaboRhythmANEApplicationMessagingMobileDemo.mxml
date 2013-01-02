@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+    <s:navigationContent>
+        <s:Button label="Home" click="navigator.popToFirstView()"/>
+        <s:Button id="openYouTubeButton" label="Open YouTube" click="openYouTubeButton_clickHandler(event)"/>
+        <s:Button id="broadcastButton" label="Broadcast" click="broadcastButton_clickHandler(event)"/>
+    </s:navigationContent>
+	<fx:Script><![CDATA[
+		import collaboRhythm.ane.applicationMessaging.actionScript.ApplicationMessaging;
+
+		private function openYouTubeButton_clickHandler(event:MouseEvent):void
+		{
+			var extension:ApplicationMessaging = new ApplicationMessaging();
+			extension.intent("com.google.android.youtube");
+		}
+
+		private function broadcastButton_clickHandler(event:MouseEvent):void
+		{
+			var extension:ApplicationMessaging = new ApplicationMessaging();
+			extension.sendBroadcast("CollaboRhythm-health-action-received-v1", "duplicate", "healthActionStringTest1");
+		}
+		]]></fx:Script>
+</s:ViewNavigatorApplication>

@@ -1,0 +1,41 @@
+<project name="Air Native Extension Build Script" default="all">
+
+	<!-- Config -->
+	<property file="build.properties"/>
+
+	<!-- All -->
+	<target name="all" depends="package" description="Full build of extension"/>
+
+	<!-- Package -->
+	<target name="package" description="Create the extension package">
+		<mkdir dir="${out.directory}/temp/ios/"/>
+		<mkdir dir="${out.directory}/temp/android/"/>
+		<copy todir="${out.directory}/temp/android/">
+			<fileset dir="${out.directory}/../artifacts/CollaboRhythm_ANE_ApplicationMessaging_Android_jar"/>
+		</copy>
+		<mkdir dir="${out.directory}/temp/default/"/>
+
+		<mkdir dir="${out.directory}/temp/swc/"/>
+		<unzip src="${out.directory}/${swc.file}" dest="${out.directory}/temp/swc/content" overwrite="true"/>
+		<copy file="${out.directory}/temp/swc/content/library.swf" todir="${out.directory}/temp/ios" overwrite="true"/>
+		<copy file="${out.directory}/temp/swc/content/library.swf" todir="${out.directory}/temp/android" overwrite="true"/>
+		<copy file="${out.directory}/temp/swc/content/library.swf" todir="${out.directory}/temp/default" overwrite="true"/>
+		<delete dir="${out.directory}/temp/swc/content/"/>
+
+		<exec executable="${flex.sdk}/bin/adt${bin.ext}" failonerror="true" dir="${out.directory}">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ane"/>
+			<arg value="${name}.ane"/>
+			<arg value="${basedir}/extension.xml"/>
+			<arg line="-swc ${swc.file}"/>
+			<!--<arg line="-platform iPhone-ARM -platformoptions '${basedir}/platform.xml' -C temp/ios/ ."/>-->
+			<arg line="-platform Android-ARM -C temp/android/ ."/>
+			<arg line="-platform default -C temp/default/ ."/>
+		</exec>
+
+		<!--<move file="../out/${name}.ane" todir="../bin"/>-->
+		<!--<delete dir="../temp"/>-->
+	</target>
+
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="CollaboRhythm.ANE.ApplicationMessaging.MobileDemo">
+    <configurations>
+      <configuration name="CollaboRhythm.ANE.ApplicationMessaging.MobileDemo" target-platform="Mobile" main-class="CollaboRhythmANEApplicationMessagingMobileDemo" output-file="CollaboRhythmANEApplicationMessagingMobileDemo.swf" output-folder="$MODULE_DIR$/../out/production/CollaboRhythm.ANE.ApplicationMessaging.MobileDemo">
+        <dependencies target-player="11.1">
+          <entries>
+            <entry library-id="7a0fdc8d-ad09-445c-9e04-87665f4c9525">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="4.6.0" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/CollaboRhythmANEApplicationMessagingMobileDemo-app.xml" package-file-name="CollaboRhythmANEApplicationMessagingMobileDemo" />
+        <packaging-ios package-file-name="CollaboRhythmANEApplicationMessagingMobileDemo" />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="4.6.0" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="7a0fdc8d-ad09-445c-9e04-87665f4c9525" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../out/production/CollaboRhythm.ANE.ApplicationMessaging.ane!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../CollaboRhythm.ANE.ApplicationMessaging.ActionScript/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

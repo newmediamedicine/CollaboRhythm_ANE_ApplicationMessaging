@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.ActionScript/CollaboRhythm.ANE.ApplicationMessaging.ActionScript.iml" filepath="$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.ActionScript/CollaboRhythm.ANE.ApplicationMessaging.ActionScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.Android/CollaboRhythm.ANE.ApplicationMessaging.Android.iml" filepath="$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.Android/CollaboRhythm.ANE.ApplicationMessaging.Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.MobileDemo/CollaboRhythm.ANE.ApplicationMessaging.MobileDemo.iml" filepath="$PROJECT_DIR$/CollaboRhythm.ANE.ApplicationMessaging.MobileDemo/CollaboRhythm.ANE.ApplicationMessaging.MobileDemo.iml" />
+    </modules>
+  </component>
+</project>
+
